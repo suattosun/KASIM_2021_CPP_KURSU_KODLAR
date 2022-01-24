@@ -1,3 +1,5 @@
+## Berke Sertel tarafından oluşturuldu. 
+
 /*-------------------------------------------------------------------------------
 nullptr bir sabittir ve türü nullptr_t türüdür. C++ ile kod yazarken NULL macrosu yerine
 daima nullptr anahtar sözcüğü kullanılır. Macroların C++'ta istenmemesi NULL macrosunun
@@ -13,13 +15,16 @@ C++'ta C'de typedef bildirimi kullanılmış user defined türleri gibi kullanı
 Yani struct tag enum tag ve union tag aslında türü betimleyen bir isimdir.
 Bu sebeple bu türler doğrudan kullanılabilir.
 -------------------------------------------------------------------------------*/
-struct Data{
+struct Data {
     int x,y,z;
 }
-int main(){
+
+int main()
+{
     struct Data mydata;
-    Data mydata;//C'de syntax hatası C++'ta geçerli
+    Data mydata; //C'de syntax hatası C++'ta geçerli
 }
+
 /*-------------------------------------------------------------------------------
 C'de enum türlerinin underlying type(baz türü)'ı int iken C++'ta böyle değildir.
 C++ dili için enum sabitlerine verdiğimiz değerlere bağlı olarak derleyici
@@ -29,7 +34,8 @@ Aşağıdaki örnek C dilinin kurallarına göre geçerlidir.
 
 enum Color{Red,Blue,Black};
 
-int main(){
+int main()
+{
     enum Color mycolor=Red;
 
     mycolor=76;
@@ -46,13 +52,14 @@ enum Color{Red,Blue,Black};
 enum Pos{Off,On,Hold};
 
 
-int main(){
-    enum Color mycolor=Red;
+int main()
+{
+    enum Color mycolor = Red;
 
-    mycolor=76;//1
-    mycolor=1;//2
-    int ival;//3
-    ival=Red;//4
+    mycolor = 76;//1
+    mycolor = 1;//2
+    int ival; //3
+    ival=Red; //4
 }
 
 /*-------------------------------------------------------------------------------
@@ -87,9 +94,8 @@ elemanı bulunamaz.
 enum Color{Red,Black,Blue};
 enum TrafficLights{Red,Yellow,Green};
 
-int main(){
-
-
+int main()
+{
 
 }
 /*-------------------------------------------------------------------------------
