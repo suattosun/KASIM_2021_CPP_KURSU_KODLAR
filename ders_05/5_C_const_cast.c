@@ -7,8 +7,8 @@ int main(void)
 {
 	const int x = 10;
 	
-    int* p1 = &x; //C'de uyarı, c++'da syntax hatası.
+    	int* p1 = &x; //C'de uyarı, c++'da syntax hatası.
 	
-    int* p2 = (int*)&x; //Fakat şimdi derleyicinin uyarısı kesildi. Ama yine de riskli bir kod.
+    	int* p2 = (int*)&x; //Fakat şimdi derleyicinin uyarısı kesildi. Ama yine de riskli bir kod.
 	*p2 = 56; //değiştirme girişimi undefined behaviour
 }
