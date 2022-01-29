@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    int sum = 345;
+    	int sum = 345;
 	int cnt = 17;
 
 	double result = (double)sum / cnt; //operandlardan biri double türüne dönüştürüldüğü için sonuç double olacaktır.
