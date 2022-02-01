@@ -34,7 +34,7 @@ public:
 
 void animal_game(Animal& ra) {
 	// when the function is virtual the binding here is done during runtime which is called dynamic binding 
-	// when the function is not virtual, binding is done during runtime which is called static binding
+	// when the function is not virtual, binding is done during compile time which is called static binding
 	ra.eat();
 }
 
