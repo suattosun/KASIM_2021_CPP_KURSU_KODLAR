@@ -15,5 +15,5 @@ int main()
     decltype(x) a; //a'nın türü int
     decltype(cx) ca = 10; //ca'nın türü const int (const'luk düşmez). Const olduğundan ilk değer vermek gerekir. 
     decltype(ptr) p; //p'nin türü int*
-    decltype(r) ref = x; //ref'in türü int&
+    decltype(r) ref = x; //ref'in türü int& (referanslık da düşmez)
 }
