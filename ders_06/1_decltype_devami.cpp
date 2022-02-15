@@ -1,8 +1,5 @@
 /****************	decltype  ****************/
 
-// decltype konusu aslen 5.Ders'in son 75 dk sindan itibaren anlatilmaya baslanmis.
-// 5.Ders'e ait kisimda decltype ile ilgili bir kisim goremedim!
-
 /*
 mantik olarak "auto" keywordüne benziyor fakat kullanimi daha karisik.
 
