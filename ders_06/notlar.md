@@ -27,10 +27,11 @@ sizeof(a[10])
 decltype(++x) // x'in degeri degismez!
 */
 
+****************************************************************
 ### Dynamic Cast
-
 + C de karsiligili yok. Kalitim konusuna girince görecegiz.
 
+****************************************************************
 
 ## extern "C"  
 
@@ -86,7 +87,7 @@ int main()
 		#endif#
 ```
 
-## **Sınıflara giriş `(Introduction to Classes)`
+## Sınıflara giriş `(Introduction to Classes)`
 + C++ 'in en cok ovundugu taraf; data abstraction tarafinda kullaniciya cok daha fazla imkan veriyor.
 Ornegin 2 matrix'i toplamak istedigimizde C++ bize bu imkani veriyor ama siniflari kullanmamiz gerekiyor.
 
@@ -268,7 +269,7 @@ struct Data{
 Siniflarin elemanlari derleyicinin yapacagi erisim kontrolu acisindan 3 ayri statüde olabilir:
 + public elemanlari (public reference): Herkese acik
 + private elemanlari: Sinifin ic yapisinda kullanilacak olan, disariya acik olmayan, clientlarin bilmesi gerekmeyen veya istenmeyen üyeler.
-protected elemanlar: Kalitim konusuyla ilgili oldugundan daha sonra detaya girilecek. Ozetle kalitim ile olusturulan siniflar base class'in protected bolumune erisebilir ama private bolumune erisemez. Bunun disinda private ile fark yok.
++ protected elemanlar: Kalitim konusuyla ilgili oldugundan daha sonra detaya girilecek. Ozetle kalitim ile olusturulan siniflar base class'in protected bolumune erisebilir ama private bolumune erisemez. Bunun disinda private ile fark yok.
 
 + eger sadece class ifadesi yazilirsa
 
@@ -383,7 +384,6 @@ int main()
 ```
 ****************************************************************
 
-****************************************************************/
 + Ayni ornegin member function ile gerceklenmesi.
 + kimin saldiracagi asagida bariz belli
 ```
@@ -868,7 +868,8 @@ void Myclass::func()
 }
 ```
 
-### Cevap: this, lvalue olmasi gerekirken pr value oldugundan hata aliyoruz. Not: This pointer'ini atama operatorunun sol operandi yapamazsiniz!
+### Cevap:
+this, lvalue olmasi gerekirken pr value oldugundan hata aliyoruz. Not: This pointer'ini atama operatorunun sol operandi yapamazsiniz!
 
 + peki onceki soruda 
 + *this = m: olsa ne olurdu?
@@ -876,7 +877,7 @@ void Myclass::func()
 
 ****************************************************************
 
-### Anlatilan populer hatalar:
+### Populer hata:
 + Global func. ile sinifin uye func. hicbir zaman bir overload olusturmaz.
 
 ****************************************************************
