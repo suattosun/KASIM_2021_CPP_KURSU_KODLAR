@@ -74,6 +74,7 @@
 
 ## Ders_07
 ### Sınıflara giriş `(Introduction to Classes)` - Devam
++ ### this göstericisi ve \*this - devam
 + ### sınıfların öğeleri `(class members)`
     + sınıfların veri öğeleri `(data members)`
         + non-static veri öğeleri
