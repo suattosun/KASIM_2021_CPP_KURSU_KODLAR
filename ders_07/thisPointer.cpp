@@ -1,6 +1,6 @@
 
 
-// this pointer ile fluent API uygulamasi
+// this pointer ile chaining uygulamasi (diger programlama dillerinde fluent API olarak geciyor)
 
 class Myclass {
 public:
