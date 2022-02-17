@@ -1,8 +1,8 @@
 
 
 // const member function ornegi
-// Sinifin non-const uye fonksiyonu sýnýfýn uye fonksiyonlarini cagirabilir.
-// Sinifin const uye fonksiyonu sýnýfýn non-const uye fonksiyonlarini cagiramaz.
+// Sinifin non-const uye fonksiyonu sinifin uye fonksiyonlarini cagirabilir.
+// Sinifin const uye fonksiyonu sinifin non-const uye fonksiyonlarini cagiramaz.
 
 // Const bir sinif nesnesi icin yalnizca sinifin const uye islevlerini cagirabilir.
 // Const bir sinif nesnesi icin yalnizca sinifin non-const uye islevlerini cagiramayiz.
