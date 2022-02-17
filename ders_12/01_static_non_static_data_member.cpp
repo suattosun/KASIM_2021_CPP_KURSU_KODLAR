@@ -1,5 +1,5 @@
 /*
-* non-static veri elemanları (data memebers) sınıfın fiilen içindedir yani her sınıf için ayrıdır.
+* non-static veri elemanları (data members) sınıfın fiilen içindedir yani her sınıf için ayrıdır.
 * Fakat static data elemanları sınıf başına tektir.
 */
 
@@ -12,7 +12,7 @@ public:
 
 //myclass.cpp
 int Myclass::x; //tanımda static keyword kullanılmayacak!!! Diğer türlü syntax error.
-//Aşağıdaki tanımlarda tabiki mümkün:
+//Aşağıdaki tanımlarda tabiiki mümkün:
 //int Myclass::x = 77;
 //int Myclass::x(77);
 //int Myclass::x{77};
