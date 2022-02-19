@@ -84,3 +84,18 @@
         + non-static üye işlevler
         + const üye işlevler
         + static üye işlevler
+
+**************************
+
+## Ders_29
+### `(templates)` - Devam
++ ### explicit specialization / full specialization 
++ ### partial specialization
++ ### meta-function
+	+ ### deger hesaplamaya yönelik meta-function
+	+ ### tür hesaplamaya yönelik meta-function
++ ### alias template
++ ### variable templates
+
+
+
