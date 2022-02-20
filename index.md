@@ -13,6 +13,8 @@
 + **Boost** kütüphanesi ile ilgili kisa bilgilendirme
 + C dili ile C++ icindeki C dili arasindaki farklar
 
+**************************
+
 ## Ders_02
 + C dili ile C++ icindeki C dili arasindaki farklar - Devam
 + enum class in C++
@@ -25,6 +27,8 @@
 + referans semantigi `(reference semantics)`
 + deger kategorileri`(value categories)`
 
+**************************
+
 ## Ders_03
 ### Referans Semantiği (Reference Semantics)
 + sol taraf referansları `(L value references)`
@@ -35,6 +39,7 @@
 + referans döndüren işlevler
 + Auto Type Deduction
 
+**************************
 ## Ders_04
 + ### Auto Type Deduction - Devam
 + ### Sabit İfadeleri _(Constant Expressions)_
@@ -50,6 +55,9 @@
     + işlev yüklemesinde dikkat edilmesi gereken durumlar
 + ### C++ a neden `nullptr` eklendi?
 
+
+**************************
+
 ## Ders_05
 + ### İşlev Yüklemesi`(Function Overloading)` - Devam
 + ### Tür Dönüştürme Operatörleri _(Type-cast Operators)_
@@ -59,6 +67,8 @@
     + dynamic_cast<> operatörü `(kalıtım başlığı altında)`
 + enum türleri `(enum classes & scope)`
 + ### decltype `(declared type of name)`
+
+**************************
 
 ## Ders_06
 + ### decltype `(declared type of name)` - devam
@@ -71,6 +81,8 @@
         + private öğeler `(private members)`
         + protected öğeler `(protected members)`
   + **this göstericisi ve \*this**
+
+**************************
 
 ## Ders_07
 ### Sınıflara giriş `(Introduction to Classes)` - Devam
@@ -97,5 +109,18 @@
 + ### alias template
 + ### variable templates
 
+**************************
 
+## Ders_30
+### `(templates)` - Devam
++ ### perfect forwarding
++ ### Variadic templates
+	+ ### template parameter pack
+	+ ### function parameter pack
+	+ ### pack expansion
+	+ ### variadic parametreleri kullanma teknikleri
+		+ #### compile-time recursive pack expansion
+		+ #### compile-time recursive pack expansioninitializer list
+		+ #### C++17 fold expression(Advanced C++ kursu kapsaminda)
+		+ #### C++17 compile-time if(kisa tanitim yapildi)
 
