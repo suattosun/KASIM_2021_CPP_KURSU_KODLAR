@@ -99,6 +99,15 @@
 
 **************************
 
+## Ders_10
++ ### Özel üye fonksiyonları(special member function) derleyici tarafında tablo şeklinde yorumlanması
++ ### Conversion constructor
++ ### Explicit conversion constructor
++ ### Geçici sınıf nesneleri (Temporary Object)
++ ### Kopyalamanın elimine edilmesi (Copy Elision) - giriş
+
+**************************
+
 ## Ders_29
 ### `(templates)` - Devam
 + ### explicit specialization / full specialization 
