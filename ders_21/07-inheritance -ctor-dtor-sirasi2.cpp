@@ -1,7 +1,7 @@
 #include <iostream>
 
-// Constructor ve Destructor'larýn cagrilma sirasi ile ilgili ornek
-// Uyelerin elemanlarýn ctor'lari bulunduklarý class'in ctor'undan once cagrilir.
+// Constructor ve Destructor'larÃ½n cagrilma sirasi ile ilgili ornek
+// Uyelerin elemanlarÃ½n ctor'lari bulunduklarÃ½ class'in ctor'undan once cagrilir.
 // Base ctor -> Member ctor -> Der ctor -> Der dtor -> Member dtor -> Base dtor
 // First in last out
 class Base {
