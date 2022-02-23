@@ -1,6 +1,6 @@
 #include <iostream>
 
-// Constructor ve Destructor'larýn cagrilma sirasi ile ilgili ornek
+// Constructor ve Destructor'larin cagrilma sirasi ile ilgili ornek
 // Base ctor -> Der ctor -> Der dtor -> Base Dtor
 // First in last out
 class Base {
