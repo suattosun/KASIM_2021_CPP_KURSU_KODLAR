@@ -1,6 +1,6 @@
 #include <iostream>
 
-// Multilevel inheritance Constructor ve Destructor'larýn cagrilma sirasi ile ilgili ornek
+// Multilevel inheritance Constructor ve Destructor'larÃ½n cagrilma sirasi ile ilgili ornek
 class Base {
 public:
 	Base()
