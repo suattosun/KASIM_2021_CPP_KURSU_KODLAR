@@ -98,19 +98,6 @@
         + static üye işlevler
 
 **************************
-## Ders_27
-### Exception Handling - Devam
-### Templates
-+ ### template konusuna giris - generic paradigm
-+ ###  function templates
-    + deduction sureci
-    + type ve non type parameters
-    + Fonk. veya class parametresi olarak template parametresi kullanimi
-+ ###  explicit template argumani ve tipik kullanim senaryolari
-+ ###  auto return type
-+ ###  trailing return type
-
-**************************
 
 ## Ders_10
 + ### Özel üye fonksiyonları(special member function) derleyici tarafında tablo şeklinde yorumlanması
