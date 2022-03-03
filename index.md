@@ -107,6 +107,18 @@
 + ### Kopyalamanın elimine edilmesi (Copy Elision) - giriş
 
 **************************
+
+## Ders_17
+### Namespace
++ ### Nested Namespace
++ inline Namespace
++ unnamed Namespace
++ namespace alias
+### Nested Types
+### Composition (Containment)
+
+**************************
+
 ## Ders_27
 ### Exception Handling - Devam
 ### Templates
