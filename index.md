@@ -110,7 +110,7 @@
 
 ## Ders_17
 ### Namespace
-+ ### Nested Namespace
++ Nested Namespace
 + inline Namespace
 + unnamed Namespace
 + namespace alias
