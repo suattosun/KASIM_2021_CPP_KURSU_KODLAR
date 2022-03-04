@@ -555,7 +555,7 @@ auto deductionda esitligin saginda deduction icin kullandigimiz degisken, templa
 Buradaki x'in tipi nedir?
 
 ```
-template<typename T="">
+template<typename T>
 void func(T x)
 {
 
@@ -860,10 +860,10 @@ int main()
 ```
 #include
 
-template<typename t="">
-class Typeteller;</typename>
+template<typename T>
+class Typeteller;
 
-template<typename t="">
+template<typename T>
 void func(T &&) //forwarding reference veya Universal Reference
 {
 Typeteller y;
@@ -906,6 +906,7 @@ int x = 10;
 func(x);
 }
 ```
+```
 IDE ayni sekilde T'nin "int &" türünden olmasi gerektigini söylüyor. Bu durumda template'in imzasi su sekilde sekillenecek:`void func(int& &&param)`
 **C++ ta reference to reference yoktur. Template gibi bazi baglamlarda bu tip bir durum olusunca. Address collapsing kurallari devreye girecek:**
 T & & Sonuc     = T& (eger sol taraf reference ina sol taraf reference i olusursa )
@@ -913,7 +914,7 @@ T & && Sonuc   = T&(eger sol taraf reference ina sag taraf reference i olusursa 
 T && & Sonuc   = T&(eger sag taraf reference ina sol taraf reference i olusursa )
 T && && Sonuc = T&&(eger sag taraf reference ina sag taraf reference i olusursa )
 + ### Ancak sag taraf reference ina sag taraf reference i olusmasi durumunda sag taraf sonucu cikiyor.Logical OR ifadesi gibi! 
-
+```
 + ### Olusan sonuc:
 
 - Bir func par. universal reference(forwarding reference ise) , bu durumda cikarim nasil yapiliyormus? Derleyici func. gonderilen argumana bakiyor. Arguman in deger category si rvalue, T bir referans türü degil. Bu durumda func. parametre degiskeni sag taraf reference i olacak.
@@ -933,11 +934,11 @@ Eger asagidaki func. sag taraf degeri ile cagirirsam calisir. Sol taraf degeri i
 
 class Typeteller;
 
-template<typename t="">
+template<typename T>
 void func(T &&param)
 {
 T x;
-}</typename>
+}
 
 //Universal Reference ise hangi tür kullanilacagi
 //fonksiyon cagrisindaki deger kategorisinden elde edilecek!
@@ -1015,8 +1016,8 @@ mytype&& x = 10;
 + ### && ve && --> sonuc x SAG taraf reference'i olacak
 
 Tekrar etmek gerekirse:
-a- template argument deduction sirasinda
-b- using yada typedef tanimlari yapildiginda reference collapsing kurallari devreye giriyor ve cozumleme yapiliyor.
+- a- template argument deduction sirasinda
+- b- using yada typedef tanimlari yapildiginda reference collapsing kurallari devreye giriyor ve cozumleme yapiliyor.
 Ozet: Sadece sag ref to sag ref = Sag taraf ref
 else
 sol taraf ref olacak!
@@ -1233,26 +1234,27 @@ Bu durumda derleyicinin bizim icin uretecegi func fonksiyonu'nun parametresi int
 
 ###  Soru:
  ```
-#include
 
-template &lt;typename T, int size&gt;
-void func(T (&)\[size\]);
+#include<iostream>
 
-template<typename t="">
-void foo(T &);</typename>
+template<typename T, int size>
+void func(T (&) [size]);
+
+template<typename T>
+void foo(T &);
 
 int main()
 {
-int a\[5\]{};
-foo(a);
+    int a[5]{};
+    foo(a);
 
-std::cout << "executed \\n";
+    std::cout << "executed \\n";
 }
 ```
 + Cevap:
-T'nin türü: int \[5\]
-func. imzasi:
-void foo&lt;int \[5\]&gt;(int (&)\[5\]);
+T'nin türü: int [5]
+foo func. imzasi:
+(int (&)[5]);
 
 *****************************************************************************
 
@@ -1260,15 +1262,15 @@ void foo&lt;int \[5\]&gt;(int (&)\[5\]);
 ```
 #include
 
-template &lt;typename T, int size&gt;
-void func(T (&)\[size\]);
+template<typename T, int size>
+void func(T (&)[size]);
 
-template<typename t="">
-void foo(T &);</typename>
+template<typename T>
+void foo(T &);
 
 int main()
 {
-int a\[5\]{};
+int a[5]{};
 func(a);
 
 std::cout << "executed \\n";
@@ -1276,8 +1278,8 @@ std::cout << "executed \\n";
 ```
 + Cevap: T=int, size = 5; func. imzasi: void foo<int, 5>(int (&)[5]); yani:
 ```
-template &lt;typename T, int size&gt;
-void func(T (&)\[size\]); //int (&) \[5\]
+template<typename T, int size>
+void func(T (&)[size]); //int (&) [5]
 ```
 *****************************************************************************
 
@@ -1285,7 +1287,7 @@ void func(T (&)\[size\]); //int (&) \[5\]
 ```
 #include
 
-template &lt;typename T, typename U&gt;
+template <typename T, typename U>
 void foo(T(*)(U));
 
 int func(double);
@@ -1349,7 +1351,7 @@ int main()
 
 - buradaki surec'e substitution diyoruz. Bunun neden bu kadar önemli oldugu ileride anlasilacak!
 ### substitution:
-Derleyici bizim gönderdigimiz template parameteresini(T) deduction ile anladiktan sonra, T parametresine göre tanimladigimiz fonksiyonun imzasini cikarir. Bu örnek icin kousacak olursak:
+Derleyici bizim gönderdigimiz template parameteresini(T) deduction ile anladiktan sonra, T parametresine göre tanimladigimiz fonksiyonun imzasini cikarir. Bu örnek icin konusacak olursak:
 T=int,
 substitution sonrasi olusan fonksiyonun imzasi ise su sekilde olur:
 int * foo(int *);
@@ -1475,7 +1477,7 @@ int main()
 *****************
 
 - Neden scott meyers in Universal Reference tabiri daha populer.
-- Cunku bu tarz bir func. sol ve sag taraf degeri gonderilbilir.
+- Cunku bu tarz bir func.'a sol ve sag taraf degeri gonderilebilir.
 - Asagidaki func. her tur degiskenle cagrilabiliyor.
 ```
 template<typename T>
@@ -1489,7 +1491,7 @@ void func(T &&);
 	- move semantics
 	- perfect forwarding(ileride islenecek)
 
-- func. larin cagrilma durumuna gore ayni template ten cok fazla sayida func. lar uretilabilir. STL de gorecegimiz gibi.
+- func. larin cagrilma durumuna gore ayni template ten cok fazla sayida func. lar uretilebilir. STL de gorecegimiz gibi.
 
 - buradaki parameter terimlerine dikkat , farkli
 ```
@@ -1499,7 +1501,7 @@ void func(T x) // x call parameter
 
 }
 ```
-- ayni olmak zorunda dedgiller!
+- ayni olmak zorunda degiller!
 ```
 template <typename T> //template type parameter
 void func(T (&x)[10]) // x call parameter
@@ -1517,7 +1519,7 @@ void func(F f)
     f();
 }
 ```
-- burada function pointer olabilir. Function cagri operatorunun Overload un devlesmesinin template lerle karsimiza cikmasi.
+- burada function pointer olabilir. Function cagri operatorunun Overloadu'nun devlesmesinin template lerle karsimiza cikmasi.
 
 ```
 #include<iostream>
