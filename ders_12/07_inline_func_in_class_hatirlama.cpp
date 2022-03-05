@@ -1,5 +1,5 @@
 /*
-* inline fonksiyonlaraa sınıflarda hatırlayalım ve örnek verelim.
+* inline fonksiyonları sınıflarda da hatırlayalım ve örnek verelim.
 */
 
 //class.h
@@ -13,7 +13,7 @@ public:
 inline void Neco::func()
 {
     //func inline tanımlandığı için ODR ihlali yok.
-    //veya sadece bildirimde de inline kullanılabilirdi.
+    //veya sadece bildirimde de inline anahtar sözcüğü kullanılabilirdi.
 }
 
 //VEYA:
