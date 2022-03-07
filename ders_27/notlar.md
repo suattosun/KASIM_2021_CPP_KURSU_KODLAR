@@ -1026,7 +1026,7 @@ sol taraf ref olacak!
 
 
 
-### Soru:
+### Soru: T'nin ve function in parametre türleri nedir?
 ```
 #include
 
@@ -1045,6 +1045,7 @@ int main()
 
 ### Soru:
 auto&& x = ival; // buradaki x'in türü nedir?
+
 x rvalue ref degil!
 x Universal Reference. Cikarim nasil yapiliyor?
 auto yerine auto ref gelecek. Cikarim?
@@ -1648,7 +1649,6 @@ int main()
 }
 ```
 - parametrelerin yerini degisince yine sorun:
-// - parametrelerin yerini degisince yine sorun:
 ```
 #include <iostream>
 
