@@ -25,11 +25,11 @@ int main() {
 	ptr2 = &y;				// is ok
 	*ptr2 = 15;				// syntax error in both c and cpp
 
-	// in cpp const object must be inited 
+	// in cpp const object must be initialized 
 	int* const ptr3;		// syntax error 
 	const int* ptr4;		// this is fine
 
-	// in cpp const variables can be used wherever a const is needed, in c it is not valid:
+	// in cpp const variables initialized by constant expressions can be used wherever a constant expression is needed, in c it is not valid:
 	const int size = 10;
 	int a[size] = { 0 };
 
