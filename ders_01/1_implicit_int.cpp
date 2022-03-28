@@ -1,16 +1,20 @@
 #include <iostream>
 
 // no-return type is handled as int (implicit) in c, syntax error in c
+
 func() {
 
 }
 
 // in c following means parameters are not given, in c it means no parameter
+
 int foo1();
 // in c following foo takes no parameters, in c it means no parameter
+
 int foo2(void);
 
-// old-style function definition is legal in c, syntax error in c
+// old-style function definition is legal in c, syntax error in c++
+
 int foo3(a, b, c) double b, c; { return a; }
 
 int main() {
